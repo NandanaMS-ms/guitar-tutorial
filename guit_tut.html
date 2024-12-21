@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://st4.depositphotos.com/2696723/26348/i/450/depositphotos_263485498-stock-photo-guitar-and-chords-background.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button-container {
+            margin-top: 50px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .section {
+            display: none;
+            padding: 20px;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        select {
+            font-size: 18px;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        .chord {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            background-color: white;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .chord img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to the Guitar Learning App</h1>
+        <div class="button-container">
+            <button class="button" id="chordsTutorialBtn">Study Chords</button>
+        </div>
+
+        <!-- Chords Tutorial Section -->
+        <div class="section" id="chordsTutorial">
+            <h2>Study Guitar Chords</h2>
+            <h3>Select a Chord to Learn</h3>
+            <select id="chordSelector">
+                <option value="">Select a chord</option>
+                <option value="cMajor">C Major</option>
+                <option value="gMajor">G Major</option>
+                <option value="eMajor">E Major</option>
+                <option value="dMajor">D Major</option>
+                <option value="fMajor">F Major</option>
+                <option value="aMajor">A Major</option>
+                <option value="cMinor">C Minor</option>
+                <option value="gMinor">G Minor</option>
+                <option value="eMinor">E Minor</option>
+                <option value="dMinor">D Minor</option>
+                <option value="fMinor">F Minor</option>
+                <option value="aMinor">A Minor</option>
+            </select>
+
+            <!-- Chord details -->
+            <div class="chord" id="cMajor">
+                <h4>C Major Chord</h4>
+                <img src="https://chordbank.com/cb4dg/cagey_dani_1_750.png" alt="C Major Chord Diagram">
+                <p>The C major chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: first fret of the second string.</li>
+                    <li>Second finger: Second fret of the fourth string.</li>
+                    <li>Third finger: Third fret of the fifth string.</li>
+                    <li>Strum all strings.</li>
+                </ul>
+            </div>
+
+            <div class="chord" id="gMajor">
+                <h4>G Major Chord</h4>
+                <img src="https://chordbank.com/cb4dg/notable_cora_1_750.png" alt="G Major Chord Diagram">
+                <p>The G major chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: Second fret of the fifth string.</li>
+                    <li>Second finger: Third fret of the sixth string.</li>
+                    <li>Third finger: Third fret of the first string.</li>
+                    <li>Strum all six strings.</li>
+                </ul>
+            </div>
+            <div class="chord" id="eMajor">
+                <h2>E Major Chord</h2>
+                <img src="https://chordbank.com/cb4dg/earthy_ian_1_750.png" alt="E Major Chord Diagram">
+                <p>The E major chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: First fret of the third string.</li>
+                    <li>Second finger: Second fret of the fifth string.</li>
+                    <li>Third finger: Second fret of the fourth string.</li>
+                    <li>Strum all six strings.</li>
+                </ul>
+            </div>
+    
+            <div class="chord" id="dMajor">
+                <h2>D Major Chord</h2>
+                <img src="https://chordbank.com/cb4dg/acidic_mel_1_750.png" alt="D Major Chord Diagram">
+                <p>The D major chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: Second fret of the third string.</li>
+                    <li>Second finger: Second fret of the first string.</li>
+                    <li>Third finger: Third fret of the second string.</li>
+                    <li>Strum the bottom four strings.</li>
+                </ul>
+            </div>
+    
+            <div class="chord" id="fMajor">
+                <h2>F Major Chord</h2>
+                <img src="https://chordbank.com/cb4dg/agile_lulu_1_750.png" alt="F Major Chord Diagram">
+                <p>The F major chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: first fret of first an second string together.</li>
+                    <li>Second finger: Second fret of the third string.</li>
+                    <li>Third finger: Third fret of the fourth string.</li>
+                    <li>Strum all six strings</li>
+                </ul>
+            </div>
+            
+            <div class="chord" id="aMajor">
+                <h2>A Major Chord</h2>
+                <img src="https://chordbank.com/cb4dg/artful_mae_1_750.png" alt="A Major Chord Diagram">
+                <p>The A major chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: second fret of the fourth string.</li>
+                    <li>Second finger: second fret of the third string.</li>
+                    <li>Third finger: second fret of the second string.</li>
+                    <li>Strum only the highest five strings.</li>
+                </ul>
+            </div>
+            <div class="chord" id="cMinor">
+                <h2>C Minor Chord</h2>
+                <img src="https://chordbank.com/cb4dg/bestial_sam_3_750.png" alt="C Minor Chord Diagram">
+                <p>The C minor chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: fifth string at the third fret.Flatten your finger and press down to make a barre across to the first string.</li>
+                    <li>Second finger: fourth fret of the second string.</li>
+                    <li>Third finger: fifth fret of the fourth string.</li>
+                    <li> Fourth finger:  fifth fret of the third string.</li>
+                    <li>Strum only the thinnest five strings.</li>
+                </ul>
+            </div>
+    
+            <div class="chord" id="gMinor">
+                <h2>G Minor Chord</h2>
+                <img src="https://chordbank.com/cb4dg/grumpy_isa_3_750.png" alt="G Minor Chord Diagram">
+                <p>The G minor chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: sixth string at the third fret.Flatten your finger and press down to make a barre across to the first string.</li>
+                    <li>Second finger:  fifth fret of the fifth string.</li>
+                    <li>Third finger: fifth fret of the fourth string.</li>
+                    <li>Strum all six strings.</li>
+                </ul>
+            </div>
+    
+            <div class="chord" id="eMinor">
+                <h2>E Minor Chord</h2>
+                <img src="https://chordbank.com/cb4dg/earthy_ian_1_750.png" alt="E Minor Chord Diagram">
+                <p>The E minor chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: sixth string at the third fret.Flatten your finger and press down to make a barre across to the first string.</li>
+                    <li>Second finger: fifth fret of the fifth string.</li>
+                    <li>Third finger: fifth fret of the fourth string.</li>
+                    <li>Strum all six strings.</li>
+                </ul>
+            </div>
+    
+            <div class="chord" id="dMinor">
+                <h2>D Minor Chord</h2>
+                <img src="https://chordbank.com/cb4dg/acidic_mel_1_750.png" alt="D Minor Chord Diagram">
+                <p>The D minor chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: Second fret of the third string.</li>
+                    <li>Second finger: Second fret of the first string.</li>
+                    <li>Third finger: Third fret of the second string.</li>
+                    <li>Strum the bottom four strings.</li>
+                </ul>
+            </div>
+    
+            <div class="chord" id="fMinor">
+                <h2>F Minor Chord</h2>
+                <img src="https://chordbank.com/cb4dg/grumpy_isa_1_750.png" alt="F Minor Chord Diagram">
+                <p>The F minor chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: the sixth string at the first fret .Flatten your finger and press down to make a barre across to the first string..</li>
+                    <li>Second finger: third fret of the fifth string.</li>
+                    <li>Third finger:  third fret of the fourth string.</li>
+                    <li>Strum all six strings</li>
+                </ul>
+            </div>
+            
+            <div class="chord" id="aMinor">
+                <h2>A Minor Chord</h2>
+                <img src="https://chordbank.com/cb4dg/artful_luigi_1_750.png" alt="A Minor Chord Diagram">
+                <p>The A minor chord is played by pressing the following frets:</p>
+                <ul>
+                    <li>First finger: first fret of the second string.</li>
+                    <li>Second finger: second fret of the fourth string.</li>
+                    <li>Third finger: second fret of the second string.</li>
+                    <li>Strum only the highest five strings.</li>
+                </ul>
+            </div>
+            
+            
+        </div>
+    
+            <!-- Add more chords similarly -->
+        </div>
+    </div>
+
+    <script>
+        // Chords Tutorial Button
+        const chordsTutorialBtn = document.getElementById('chordsTutorialBtn');
+        const chordsTutorialSection = document.getElementById('chordsTutorial');
+
+        // Show Chords Section
+        chordsTutorialBtn.addEventListener('click', function() {
+            chordsTutorialSection.classList.add('active');
+        });
+
+        // Chord Selector Logic
+        const chordSelector = document.getElementById('chordSelector');
+        chordSelector.addEventListener('change', function() {
+            const chords = document.querySelectorAll('.chord');
+            chords.forEach(chord => chord.style.display = 'none');
+
+            const selectedChord = chordSelector.value;
+            if (selectedChord) {
+                document.getElementById(selectedChord).style.display = 'block';
+            }
+        });
+    </script>
+
+</body>
+</html>
